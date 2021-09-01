@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://douhaostudent.github.io/</id>
     <title>逗号同学</title>
-    <updated>2021-09-01T09:05:08.543Z</updated>
+    <updated>2021-09-01T10:58:00.587Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://douhaostudent.github.io/"/>
     <link rel="self" href="https://douhaostudent.github.io/atom.xml"/>
@@ -11,16 +11,41 @@
     <icon>https://douhaostudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 逗号同学</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://douhaostudent.github.io/post/hello-gridea/</id>
-        <link href="https://douhaostudent.github.io/post/hello-gridea/">
+        <title type="html"><![CDATA[浏览器的渲染过程]]></title>
+        <id>https://douhaostudent.github.io/post/liu-lan-qi-de-xuan-ran-guo-cheng/</id>
+        <link href="https://douhaostudent.github.io/post/liu-lan-qi-de-xuan-ran-guo-cheng/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2021-09-01T10:54:24.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>##主要步骤<br>
+1.浏览器</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS进阶之旅]]></title>
+        <id>https://douhaostudent.github.io/post/CSS进阶之旅/</id>
+        <link href="https://douhaostudent.github.io/post/CSS进阶之旅/">
+        </link>
+        <updated>2021-09-01T09:45:37.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h2 id="如果一个页面中的图片很多怎么做性能优化">如果一个页面中的图片很多，怎么做性能优化</h2>
+<p>1.对于一些小图标，尽量使用iconfont来实现。<br>
+2.无法使用iconfont 来实现的，尽量使用“雪碧图”来实现<br>
+3.使用lazyload.js来实现图片懒加载<br>
+4.一定要压缩图片，推荐使用tingpng这个在线工具</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[逗号同学]]></title>
+        <id>https://douhaostudent.github.io/post/逗号同学/</id>
+        <link href="https://douhaostudent.github.io/post/逗号同学/">
+        </link>
+        <updated>2021-09-01T09:45:37.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="https://douhaostudent.github.io//post-images/1630493572132.jpg" alt="" loading="lazy">🙂逗号不是花心，逗号只是心碎成很多片<br>
+👩‍💻每一片都是爱上不同 web vue react的人</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<p><img src="https://douhaostudent.github.io//post-images/1630493572132.jpg" alt="" loading="lazy">🙂逗号不是花心，逗号只是心碎成很多片<br>
+👩‍💻每一片都是爱上不同 web vue react的人</p>
 <!-- more -->
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
 <a href="https://gridea.dev/">Gridea 主页</a><br>
@@ -30,7 +55,8 @@
 <p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
 <p>🏷️  你可以对文章进行标签分组</p>
 <p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客</p>
+<p>户端</p>
 <p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
 <p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
 <p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
