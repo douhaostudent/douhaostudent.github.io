@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>CSS进阶之旅 | 逗号同学</title>
+<title>DNS是如何变成IP地址的？ | 逗号同学</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,13 +18,13 @@
 
 
 
-    <meta name="description" content="
-如果一个页面中的图片很多，怎么做性能优化
-1.对于一些小图标，尽量使用iconfont来实现。
-2.无法使用iconfont 来实现的，尽量使用“雪碧图”来实现
-3.使用lazyload.js来实现图片懒加载
-4.一定要压缩图片，推荐使用..." />
-    <meta name="keywords" content="CSS布局" />
+    <meta name="description" content="聊聊输入URL的第一步--域名解析
+
+通过域名，IP地址共存保证：
+1：提升用户体验
+2：提高运行效率
+解释：IP地址长度是32位，用十进制表示-192.168.1.1，如果要访问网址，需要输入我们输入很长的数字，用户体验肯定很差，记忆麻烦..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -95,36 +95,46 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">CSS进阶之旅</h2>
-            <div class="post-date">2021-09-01</div>
+            <h2 class="post-title">DNS是如何变成IP地址的？</h2>
+            <div class="post-date">2021-09-12</div>
             
-              <div class="feature-container" style="background-image: url('https://douhaostudent.github.io//post-images/CSS进阶之旅.jpg')">
+              <div class="feature-container" style="background-image: url('https://douhaostudent.github.io//post-images/dns-shi-ru-he-bian-cheng-ip-di-zhi-de.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <!-- more -->
-<h2 id="如果一个页面中的图片很多怎么做性能优化">如果一个页面中的图片很多，怎么做性能优化</h2>
-<p>1.对于一些小图标，尽量使用iconfont来实现。<br>
-2.无法使用iconfont 来实现的，尽量使用“雪碧图”来实现<br>
-3.使用lazyload.js来实现图片懒加载<br>
-4.一定要压缩图片，推荐使用tingpng这个在线工具</p>
+              <p>聊聊输入URL的第一步--域名解析</p>
+<!-- more -->
+<p>通过域名，IP地址共存保证：<br>
+1：提升用户体验<br>
+2：提高运行效率<br>
+解释：IP地址长度是32位，用十进制表示-192.168.1.1，如果要访问网址，需要输入我们输入很长的数字，用户体验肯定很差，记忆麻烦，现在仍然使用域名，方便记忆。<br>
+为什么还需要IP地址呢？<br>
+因为IPV4的地址需要4个字节，而字符串表示的域名最少也需要几十个字节，这就会增加底层路由器的负担。一句话：人来使用域名，底层路由器使用IP地址。<br>
+域名解析总体可分为以下过程：<br>
+(1) 输入域名后, 先查找自己主机对应的域名服务器，域名服务器先查找自己的数据库中的数据.<br>
+(2) 如果没有， 就向上级域名服务器进行查找， 依次类推<br>
+(3) 最多回溯到根域名服务器, 肯定能找到这个域名的IP地址<br>
+(4) 域名服务器自身也会进行一些缓存， 把曾经访问过的域名和对应的IP地址缓存起来, 可以加速查找过程<br>
+具体可描述如下：</p>
+<ol>
+<li>主机先向本地域名服务器进行递归查询</li>
+<li>本地域名服务器采用迭代查询，向一个根域名服务器进行查询</li>
+<li>根域名服务器告诉本地域名服务器，下一次应该查询的顶级域名服务器的IP地址</li>
+<li>本地域名服务器向顶级域名服务器进行查询</li>
+<li>顶级域名服务器告诉本地域名服务器，下一步查询权限服务器的IP地址</li>
+<li>本地域名服务器向权限服务器进行查询</li>
+<li>权限服务器告诉本地域名服务器所查询的主机的IP地址</li>
+<li>本地域名服务器最后把查询结果告诉主机</li>
+</ol>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://douhaostudent.github.io/tag/YpOHFvTLI/" class="tag">
-                    CSS布局
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://douhaostudent.github.io/post/逗号同学/">
+                <a href="https://douhaostudent.github.io/post/liu-lan-qi-de-xuan-ran-guo-cheng/">
                   <h3 class="post-title">
-                    逗号同学
+                    浏览器的渲染过程
                   </h3>
                 </a>
               </div>
