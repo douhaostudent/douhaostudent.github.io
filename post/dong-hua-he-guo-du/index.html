@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>逗号同学 | 逗号同学</title>
+<title>动画和过渡 | 逗号同学</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,16 +18,10 @@
 
 
 
-    <meta name="description" content="🙂逗号不是花心，逗号只是心碎成很多片
-👩‍💻每一片都是爱上不同 web vue react的人
-
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdown 语法，进行快速创作
-🌉  你可以给文..." />
-    <meta name="keywords" content="CSS布局" />
+    <meta name="description" content="CSS动画
+transition过渡
+transition 的值是简写、transition-property过渡属性，transition-duration:过渡时间长度  transition-delay:延迟几秒执行。transiti..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -98,46 +92,65 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">逗号同学</h2>
-            <div class="post-date">2021-09-01</div>
+            <h2 class="post-title">动画和过渡</h2>
+            <div class="post-date">2021-10-09</div>
             
-              <div class="feature-container" style="background-image: url('https://douhaostudent.github.io//post-images/逗号同学.jpg')">
+              <div class="feature-container" style="background-image: url('https://douhaostudent.github.io//post-images/dong-hua-he-guo-du.jpg')">
               </div>
             
             <div class="post-content" v-pre>
-              <p>🙂逗号不是花心，逗号只是心碎成很多片<br>
-👩‍💻每一片都是爱上不同 web vue react的人</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客</p>
-<p>户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <p>CSS动画<br>
+transition过渡<br>
+transition 的值是简写、transition-property过渡属性，transition-duration:过渡时间长度  transition-delay:延迟几秒执行。transition-timing-function:linear-&gt;匀速；ease-in-&gt;加速；ease-out-&gt;减速：<br>
+transitio优点在于简单易用，有几大局限性：<br>
+1：transition需要事件触发，无法在网页加载时发生。<br>
+2：Transition是一次性事件，不能重复发生，除非一再触发。<br>
+3：transition：只能定义开始状态和结束状态，不能有中间态。<br>
+CSS animation 动画</p>
+<p>animation-name:指定一个@keyframes的名称，动画将要使用这个</p>
+<pre><code class="language-element:hover{">animation:1s rainbow infinite;
+}
+@keyframes rainbow{
+0%{ background:#c00;}
+50%{background:#orange;}
+100%{ background:#yellow;}
+VUE的transition动画
+Vue提供了transition的封装组件，可以给任何元素和组件添加进入/离开过渡：
+```&lt;transition name=&quot;fade&quot;&gt;
+```&lt;h2&gt;hello，逗号&lt;h2&gt;
+```&lt;transition&gt;
+```&lt;style scoped&gt;
+```.fade-enter-form,
+```.fade-leave-to{opacity:0}
+```.fade-enter-to,
+```.fade-enter-from{opacity:1}
+```.fade-enter-active,
+```.fade-leave-active{transition:opacity 1s ease}
+```&lt;style&gt;
+##Tansition组件的原理
+###VUE自动给h2元素添加动画的元素时，原理是：
+1：自动嗅探目标元素是否应用了CSS过渡或者动画，如果应用，则在恰当时机添加删除CSS类名
+2：如果transition组件提供了JS钩子函数，这些钩子函数在恰当时机被调用；
+3：如果没有找到JS钩子并且也没有检测到CSS过渡/动画,DOM插入，删除操作将会立即执行。
+##过渡CSS动画
+VUE为了知道过渡完成，内部在监听transitionend或animationed,到底使用哪一个取决于元素应用的CSS规则：
+可以通过设置type属性为animaion 或者transition来告知VUE监听的类型![]
+
+
+   
+</code></pre>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://douhaostudent.github.io/tag/YpOHFvTLI/" class="tag">
-                    CSS布局
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://douhaostudent.github.io/post/dns-shi-ru-he-bian-cheng-ip-di-zhi-de/">
+                  <h3 class="post-title">
+                    DNS是如何变成IP地址的？
+                  </h3>
+                </a>
+              </div>
             
 
             

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://douhaostudent.github.io/</id>
     <title>逗号同学</title>
-    <updated>2021-09-12T14:26:21.845Z</updated>
+    <updated>2021-10-11T09:11:57.018Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://douhaostudent.github.io/"/>
     <link rel="self" href="https://douhaostudent.github.io/atom.xml"/>
@@ -10,6 +10,54 @@
     <logo>https://douhaostudent.github.io/images/avatar.png</logo>
     <icon>https://douhaostudent.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 逗号同学</rights>
+    <entry>
+        <title type="html"><![CDATA[动画和过渡]]></title>
+        <id>https://douhaostudent.github.io/post/dong-hua-he-guo-du/</id>
+        <link href="https://douhaostudent.github.io/post/dong-hua-he-guo-du/">
+        </link>
+        <updated>2021-10-09T08:07:37.000Z</updated>
+        <content type="html"><![CDATA[<p>CSS动画<br>
+transition过渡<br>
+transition 的值是简写、transition-property过渡属性，transition-duration:过渡时间长度  transition-delay:延迟几秒执行。transition-timing-function:linear-&gt;匀速；ease-in-&gt;加速；ease-out-&gt;减速：<br>
+transitio优点在于简单易用，有几大局限性：<br>
+1：transition需要事件触发，无法在网页加载时发生。<br>
+2：Transition是一次性事件，不能重复发生，除非一再触发。<br>
+3：transition：只能定义开始状态和结束状态，不能有中间态。<br>
+CSS animation 动画</p>
+<p>animation-name:指定一个@keyframes的名称，动画将要使用这个</p>
+<pre><code class="language-element:hover{">animation:1s rainbow infinite;
+}
+@keyframes rainbow{
+0%{ background:#c00;}
+50%{background:#orange;}
+100%{ background:#yellow;}
+VUE的transition动画
+Vue提供了transition的封装组件，可以给任何元素和组件添加进入/离开过渡：
+```&lt;transition name=&quot;fade&quot;&gt;
+```&lt;h2&gt;hello，逗号&lt;h2&gt;
+```&lt;transition&gt;
+```&lt;style scoped&gt;
+```.fade-enter-form,
+```.fade-leave-to{opacity:0}
+```.fade-enter-to,
+```.fade-enter-from{opacity:1}
+```.fade-enter-active,
+```.fade-leave-active{transition:opacity 1s ease}
+```&lt;style&gt;
+##Tansition组件的原理
+###VUE自动给h2元素添加动画的元素时，原理是：
+1：自动嗅探目标元素是否应用了CSS过渡或者动画，如果应用，则在恰当时机添加删除CSS类名
+2：如果transition组件提供了JS钩子函数，这些钩子函数在恰当时机被调用；
+3：如果没有找到JS钩子并且也没有检测到CSS过渡/动画,DOM插入，删除操作将会立即执行。
+##过渡CSS动画
+VUE为了知道过渡完成，内部在监听transitionend或animationed,到底使用哪一个取决于元素应用的CSS规则：
+可以通过设置type属性为animaion 或者transition来告知VUE监听的类型![]
+
+
+   
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DNS是如何变成IP地址的？]]></title>
         <id>https://douhaostudent.github.io/post/dns-shi-ru-he-bian-cheng-ip-di-zhi-de/</id>
